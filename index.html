@@ -1,0 +1,67 @@
+<html>
+  <head> <!--cabecera del documento provee información general (metadatos) acerca del documento, incluyendo su título y enlaces a scripts y hojas de estilos-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
+    <!--css-->
+    <link rel="stylesheet" href="Stylo.css"> <!-- llamado al archivo style.css el cual contiene los estilos -->
+    <!--javaScript-->
+    <script type="text/javascript" src="js.js"></script> <!-- llamado al archivo logica.js el cual contiene todos los scripts necesarios para el funcionamiento de la calculadora-->
+    <!--fuente tipo pixel-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- preestablece conexion con la api de fuentes de google-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"><!-- enlace a tipo de fuente externa -->
+    <!--fuente tipo escrita-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"><!-- enlace a tipo de fuente externa -->
+    <title>PROGRAMACION ORIENTADA A OBJETOS</title> <!-- titulo de la pagina-->
+
+  </head>
+  <body> <!--cuerpo del documento-->
+    <h1 class="title">Recuperatorio del Parcial</h1> <!-- titulo principal -->
+  </body>
+  <div class = "container"> <!-- espacio que sirve de contenedor -->
+    <div class = "calculadora" ><!-- cuerpo de la calculadora -->
+      <div class = "shadow"> <!-- sombreado -->
+        <form name="calculator"> <!-- formulario que de estructura a la calculadora -->
+          <h3>Calculadora</h3>    <!-- titulo secundario-->
+          <div id="insset"> <!-- contenedor para los "visores" de la calculadora-->
+            <input id = "operacion" type="textfield" name="ans" value="" disabled> <!-- "visor" de opraciones ingreasadas nombrado como "ans"-->
+            <input id = "resultado" type="textfield" value="" disabled><!--"visor" de resultados-->
+          </div>
+          <br> <!--todos los botones de abajo hacen uso del evento onClick el cual dispara una funcion clickear el elemento-->
+          <input type="button" value="1" onClick="document.calculator.ans.value+='1'"><!--boton de ingrso nro 1, agrega al texto contenido en el visor de operaciones (ans) el valor 1 tantas veces como se lo presione atravez del manejo del objeto document-->
+          <input type="button" value="2" onClick="document.calculator.ans.value+='2'"><!--boton de ingrso nro 2, agrega al texto contenido en el visor de operaciones (ans) el valor 2 tantas veces como se lo presione atravez del manejo del objeto document-->
+          <input type="button" value="3" onClick="document.calculator.ans.value+='3'"><!--boton de ingrso nro 3, agrega al texto contenido en el visor de operaciones (ans) el valor 3 tantas veces como se lo presione atravez del manejo del objeto document-->
+          <input id ="boton" type="button" value="+" onClick="accionSumar()"><!--boton sumar llama a la funcion accionSumar alojada en el archivo logica.js-->
+          <br>
+          <input id = "4" type="button" value="4" onClick="document.calculator.ans.value+='4'"><!--boton de ingrso nro 4, agrega al texto contenido en el visor de operaciones (ans) el valor 4 tantas veces como se lo presione atravez del manejo del objeto document-->
+          <input id = "5" type="button" value="5" onClick="document.calculator.ans.value+='5'"><!--boton de ingrso nro 5, agrega al texto contenido en el visor de operaciones (ans) el valor 5 tantas veces como se lo presione atravez del manejo del objeto document-->
+          <input id = "6" type="button" value="6" onClick="document.calculator.ans.value+='6'"><!--boton de ingrso nro 6, agrega al texto contenido en el visor de operaciones (ans) el valor 6 tantas veces como se lo presione atravez del manejo del objeto document-->
+          <input id = "-" type="button" value="-" onClick="accionRestar()"><!--boton restar llama a la funcion accionRestar alojada en el archivo logica.js-->
+          <br>
+          <input id = "7" type="button" value="7" onClick="document.calculator.ans.value+='7'"><!--boton de ingrso nro 7, agrega al texto contenido en el visor de operaciones (ans) el valor 7 tantas veces como se lo presione atravez del manejo del objeto document-->
+          <input id = "8" type="button" value="8" onClick="document.calculator.ans.value+='8'"><!--boton de ingrso nro 8, agrega al texto contenido en el visor de operaciones (ans) el valor 8 tantas veces como se lo presione atravez del manejo del objeto document-->
+          <input id = "9" type="button" value="9" onClick="document.calculator.ans.value+='9'"><!--boton de ingrso nro 9, agrega al texto contenido en el visor de operaciones (ans) el valor 9 tantas veces como se lo presione atravez del manejo del objeto document-->
+          <input id = "*" type="button" value="*" onClick="accionMultiplicar()"><!--boton Multiplicar llama a la funcion accionMultiplicar alojada en el archivo logica.js-->
+          <br>
+          <input id = "0" type="button" value="0" onClick="document.calculator.ans.value+='0'"><!--boton de ingrso nro 0, agrega al texto contenido en el visor de operaciones (ans) el valor 0 tantas veces como se lo presione atravez del manejo del objeto document-->
+          <input id = "c" type="button" value="c" onClick = "accionLimpiar()"><!--boton Clear llama a la funcion accionLimpiar alojada en el archivo logica.js-->
+          <input id = "/" type="button" value="/" onClick="accionDividir()"><!--boton Dividir llama a la funcion accionDividir alojada en el archivo logica.js-->
+          <input id = "=" type="button" value="=" onClick= "accionIgual()"><!--boton Igual llama a la funcion accionIgual alojada en el archivo logica.js-->
+        </form>
+      </div>
+    </div>
+      <div id="container-memory"> <!-- contenedor que muestra las opraciones realizadas-->
+        <div id="container-history">  <!--contenedor donde se agregan las operaciones realizadas guardadas en memoria-->
+          <h1 id="title-history">Historial</h1> <!--titulo que aparece en el contenedor-->
+          <hr>
+
+        </div>
+        
+
+      </div>
+</div>
+
+
+</html>
